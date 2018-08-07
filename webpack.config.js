@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     module: {
-        
+
         rules: [
             {
                 test: /\.js$/,
@@ -52,6 +52,22 @@ module.exports = {
                         loader: 'file-loader',
                         options: {}
                     }
+                ]
+            }, {
+                test: /\.(svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
+
+                ]
+            }, {
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                use: [{
+
+                    loader: "file-loader"
+                }
                 ]
             }
         ]

@@ -1,8 +1,11 @@
 $white: #FFFF;
 #footer{
-    
+
+    position: fixed;
+    bottom: 0;
     color: $white;
-    background-color: pink;
+    background-color: transparent;
     width: 100%;
     height: 10;
+    //background-image: url('../../assets/images/react-native.png');
 }
