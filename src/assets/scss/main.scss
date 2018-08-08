@@ -1,6 +1,13 @@
-body {
+.slick-next {
+    right: 5%!important;
+}
 
-    
-    
-    //background-image: url('../../assets/images/bg1.jpg');
+.slick-prev { 
+    z-index: 1;
+    left: 5%!important;
+}
+
+
+body{
+    background-color: black;
 }
