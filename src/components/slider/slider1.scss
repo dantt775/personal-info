@@ -10,12 +10,26 @@
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        border-radius: 10%;
+        
 
 
-        h1{
+        .h1-slider{
+            text-transform: uppercase;
+            font-family: Arial;
+            color: cornsilk;   
+            text-align: center;
+            font-size: 30px;
+                }
+        .h2-slider{
             font-family: 'Courier New', Courier, monospace, sans-serif;
-            color: azure;   
+            color: cornsilk;   
+            text-align: center
+        }
+
+        p{
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: azure;
+            text-align: center;
         }
         }
 
