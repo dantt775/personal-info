@@ -10,7 +10,19 @@
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        
+        -webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);
+        }
+
+        .h2-slider{
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: cornsilk;   
+            text-align: center
+        }
+
+        p{
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: azure;
+            text-align: center;
         }
 
 
