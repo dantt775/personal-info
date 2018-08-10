@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import './slider1.scss'
 
 export default class Slider1 extends Component {
@@ -10,8 +9,9 @@ export default class Slider1 extends Component {
                     <div className='container'>
                         <div className='row'>
                             <div className='col-lg-12clear'>
-                                <h1 className='h1-slider'>Let's build something great together!</h1>
-                                
+                                <h1 className='h1-slider'>Lorem Ipsum Hell Yeah!</h1>
+                                <h2 className='h2-slider'> Lorem Ipsum </h2>
+
                             </div>
                         </div>
                     </div>

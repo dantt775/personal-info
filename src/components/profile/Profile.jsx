@@ -9,9 +9,16 @@ export default class Profile extends Component {
                 <div className='container'>
 
                     <div className='row'>
+                        <div className='col-lg-8 col-lg-offset-2'>
+                            <h1 className='profile-title'>Perfil</h1>
+                        </div>
+                    </div>
+
+
+                    <div className='row'>
 
                         <div className='col-lg-12'>
-                            <h1 className='profile-title'>Perfil</h1>
+
 
                             <div className='col-lg-4'>
                                 <h1 className='about-title'> Sobre mim </h1>
@@ -20,10 +27,7 @@ export default class Profile extends Component {
                                     vitae quisque neque tempus. vehicula malesuada est nisl velit ut vel non augue molestie risus,
                                     torquent ligula aenean conubia hac quisque pulvinar est fermentum magna, eu interdum aliquet
                                     facilisis suscipit tempor inceptos rutrum ad. arcu nibh blandit nostra semper sed porta lectus
-                                    nam libero, maecenas arcu pharetra nec eget lobortis odio class donec, etiam ullamcorper feugiat
-                                    non ultrices vivamus cursus curabitur. duis neque eros torquent ligula semper lacinia sociosqu hac
-                                    purus tristique rutrum enim feugiat sed, gravida senectus vestibulum tincidunt dictum primis habitasse
-                                    condimentum quisque litora nullam euismod.
+                                    nam libero.
 
                                 </p>
                             </div>

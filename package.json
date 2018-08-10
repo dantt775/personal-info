@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "webpack --mode development",
+  "scripts": {     
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --port 8000"
+    "dev": "webpack-dev-server --mode development --port 8000"
   },
   "keywords": [],
   "author": "",
