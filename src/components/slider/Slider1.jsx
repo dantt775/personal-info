@@ -10,7 +10,7 @@ export default class Slider1 extends Component {
                         <div className='row'>
                             <div className='col-lg-12clear'>
                                 <h1 className='h1-slider'>Lorem Ipsum Hell Yeah!</h1>
-                                <h2 className='h2-slider'> Lorem Ipsumd Hell Yeeah! </h2>
+                                <h2 className='h2-slider'> Lorem Ipsumd Hell Yseeah! </h2>
 
                             </div>
                         </div>
