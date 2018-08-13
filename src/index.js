@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HashRouter, Route, Redirect, BrowserRouter, Switch, browserHistory } from 'react-router-dom'
 
-import Header from './components/header/Header.jsx'
-import Footer from './components/footer/Footer.jsx'
-import Carousel from './components/carousel/Carousel.jsx'
-import Profile from './components/profile/Profile.jsx'
+
+
+import Home from './components/home/Home.jsx'
 import "./assets/scss/main.scss"
 
 
@@ -14,11 +14,16 @@ import "./assets/scss/main.scss"
 
 
 
-ReactDOM.render(
-    <div>    
-    {/*<Header /> */}
-    <Carousel />
-    <Profile />
-    <Footer />
-    </div>
-    , document.getElementById('app'))
+ReactDOM.render((
+
+    <HashRouter history={browserHistory}>
+        <Switch>
+            <Route path="/home" component={Home} />
+            
+            <Redirect from="*" to="/home" />
+        </Switch>
+    </HashRouter>
+
+),
+    document.getElementById('app')
+);
