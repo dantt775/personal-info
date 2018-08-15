@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect, browserHistory  } from 'react-r
 import Home from '../home/Home.jsx'
 
 const Routes = () => (
-    <BrowserRouter history ={browserHistory} >
+    <BrowserRouter history={browserHistory}> 
         <Switch>
             <Route path='/home' component={Home} />
             <Redirect from='*' to="/home" />
