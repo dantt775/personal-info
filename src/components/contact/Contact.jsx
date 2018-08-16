@@ -79,10 +79,8 @@ class Contact extends Component {
 
                 <div className='container'>
                     <div className='row'>
-
                         <div className='col-lg-8 col-lg-offset-2'>
                             <h1 className='contact-title'> Contato </h1>
-
                         </div>
                         <div className='col-lg-4 col-lg-offset-4'>
                             <form>
@@ -105,8 +103,6 @@ class Contact extends Component {
                                         }
                                     }}>
                                 </TextField>
-
-
                                 <TextField
                                     id="body"
                                     label="Fale comigo ;]"
@@ -128,7 +124,6 @@ class Contact extends Component {
                                         }
                                     }}>
                                 </TextField>
-
                                 {/* <input
                                     required
                                     type="email"
@@ -158,33 +153,27 @@ class Contact extends Component {
                                 </Button>
                                 {this.state.errorMail && (
                                     <div>
-                                        <a className="glyphicon-criar-conta glyphicon glyphicon-remove x-icon" />
+                                        <a className='glyphicon glyphicon-remove x-icon'/>
                                         <small id="emailHelp" className="form-text text-muted">E-mail inválido!</small>
                                     </div>
                                 )}
                                 {this.state.errorBody && (
                                     <div>
-                                        <a className="glyphicon-criar-conta glyphicon glyphicon-remove x-icon" />
+                                        <a className='glyphicon glyphicon-remove x-icon' />
                                         <small id="emailHelp" className="form-text text-muted">Body muito curto!</small>
                                     </div>
                                 )}
                                 {this.state.sended && (
                                     <div>
-                                        <a className="glyphicon-criar-conta glyphicon  glyphicon-ok x-icon" />
-                                        <small id="emailHelp" className="form-text text-muted">E-mail enviado!</small>
+                                        <a className='glyphicon  glyphicon-ok x-icon'/>
+                                        <small id="emailHelp" className="form-text text-muted">Enviado com sucesso!</small>
                                     </div>
                                 )}
 
-
                             </form>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
             </section>
         )
     }
