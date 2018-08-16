@@ -35,18 +35,29 @@ class Contact extends Component {
         this.state = {
             email: '',
             body: '',
-            error: false,
+            errorBody: false,
+            errorMail: false,
             sended: false,
         }
         this.handleChange = this.handleChange.bind(this);
+        this.verifyBody = this.verifyBody.bind(this);
+        this.verifyEmail = this.verifyEmail.bind(this);
     }
 
     verifyEmail() {
         const rex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const error = !rex.test(String(this.state.email).toLowerCase());
-        this.setState({ error });
-        return !error;
+        console.log('verifyEmail: ', error)
+        this.setState({ errorMail: error });
+        return error;
     }
+
+    verifyBody() {
+        const errorBody = (this.state.body.length > 10) ? false : true;
+        this.setState({ errorBody: errorBody });
+        return errorBody
+    }
+
 
     handleChange(event) {
         this.setState({
@@ -55,17 +66,9 @@ class Contact extends Component {
     }
 
     handleSendMail() {
-        if( this.verifyEmail()) {
-            console.log('email ok', this.state.error) 
-            this.setState({
-                sended: true,
-            })
-        } else{
-            console.log('email inválido', this.state.error);
-
-        }
-
-
+        this.setState({ sended: false })
+        if (!this.verifyBody() & !this.verifyEmail())
+            this.setState({ sended: true })
     }
 
     render() {
@@ -125,6 +128,7 @@ class Contact extends Component {
                                         }
                                     }}>
                                 </TextField>
+
                                 {/* <input
                                     required
                                     type="email"
@@ -152,40 +156,22 @@ class Contact extends Component {
                                     Enviar
                                     <Icon className={classes.rightIcon}></Icon>
                                 </Button>
-                                {this.state.error && (
+                                {this.state.errorMail && (
                                     <div>
                                         <a className="glyphicon-criar-conta glyphicon glyphicon-remove x-icon" />
-                                        <small
-                                            style={{
-                                                fontFamily: 'Arial',
-                                                color: 'white',
-                                                paddingLeft: '3%',
-                                                fontWeight: 'normal',
-                                                
-
-                                            }}
-                                            id="emailHelp"
-                                            className="form-text text-muted">
-                                            E-mail inválido!
-                                            </small>
+                                        <small id="emailHelp" className="form-text text-muted">E-mail inválido!</small>
+                                    </div>
+                                )}
+                                {this.state.errorBody && (
+                                    <div>
+                                        <a className="glyphicon-criar-conta glyphicon glyphicon-remove x-icon" />
+                                        <small id="emailHelp" className="form-text text-muted">Body muito curto!</small>
                                     </div>
                                 )}
                                 {this.state.sended && (
                                     <div>
                                         <a className="glyphicon-criar-conta glyphicon  glyphicon-ok x-icon" />
-                                        <small
-                                            style={{
-                                                fontFamily: 'Arial',
-                                                color: 'white',
-                                                paddingLeft: '3%',
-                                                fontWeight: 'normal',
-                                                
-
-                                            }}
-                                            id="emailHelp"
-                                            className="form-text text-muted">
-                                            E-mail enviado!
-                                            </small>
+                                        <small id="emailHelp" className="form-text text-muted">E-mail enviado!</small>
                                     </div>
                                 )}
 
