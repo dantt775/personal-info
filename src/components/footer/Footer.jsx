@@ -29,14 +29,7 @@ export default class Footer extends Component {
                             <p> Daniel Marchi © 2018 </p>
                             <p> daniel.marchi@outlook.com </p>
                         </div>
-
-                    </div>
-                    <div className='row'>
-
-                    </div>
-
-
-
+                    </div>                   
                 </div>
             </section>
         )
