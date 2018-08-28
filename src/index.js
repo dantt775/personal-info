@@ -135,3 +135,7 @@ store.dispatch({
     payload: 30
 })
 
+store.dispatch({
+    type: 'SET_NAME',
+    payload: 'Test'
+})
