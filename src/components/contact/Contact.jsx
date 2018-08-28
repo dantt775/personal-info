@@ -89,7 +89,7 @@ class Contact extends Component {
                                     label="E-mail"
                                     className={classes.textField}
                                     value={this.state.email}
-                                    onChange={this.handleChange}
+                                    onChange={(event) => { this.setState({ [event.target.id]: event.target.value, }) }}
                                     margin="normal"
                                     InputProps={{
                                         classes: {
@@ -153,7 +153,7 @@ class Contact extends Component {
                                 </Button>
                                 {this.state.errorMail && (
                                     <div>
-                                        <a className='glyphicon glyphicon-remove x-icon'/>
+                                        <a className='glyphicon glyphicon-remove x-icon' />
                                         <small id="emailHelp" className="form-text text-muted">E-mail inválido!</small>
                                     </div>
                                 )}
@@ -165,7 +165,7 @@ class Contact extends Component {
                                 )}
                                 {this.state.sended && (
                                     <div>
-                                        <a className='glyphicon  glyphicon-ok x-icon'/>
+                                        <a className='glyphicon  glyphicon-ok x-icon' />
                                         <small id="emailHelp" className="form-text text-muted">Enviado com sucesso!</small>
                                     </div>
                                 )}
