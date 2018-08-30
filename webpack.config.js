@@ -8,19 +8,12 @@ module.exports = {
         
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
                 }
-            },
-            {
-                test: /\.jsx$/,
-                use: {
-                    loader: "babel-loader"
-                }
-            },
-              {
+            },{
                 test: /\.html$/,
                 use: [{
                     loader: "html-loader",
@@ -39,19 +32,7 @@ module.exports = {
                     loader: "sass-loader" // compiles Sass to CSS
                 }]
             }, {
-                test: /\.(png|jpg|gif)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {}
-                }]
-            }, {
-                test: /\.(svg)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {}
-                }]
-            }, {
-                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                test: /\.(eot|woff|woff2|svg|ttf|png|jpg|gif)([\?]?.*)$/,
                 use: [{
                     loader: "file-loader"
                 }]

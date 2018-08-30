@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { BrowserRouter, Route, Switch, Redirect, browserHistory  } from 'react-router-dom'
-import Home from '../home/Home.jsx'
+import Home from '../home/Home'
 
 const Routes = () => (
     <BrowserRouter history={browserHistory}> 
