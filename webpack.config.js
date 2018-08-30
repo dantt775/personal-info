@@ -7,6 +7,19 @@ module.exports = {
     module: {
         
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.jsx$/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
               {
                 test: /\.html$/,
                 use: [{
@@ -54,5 +67,8 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.jsx']
+      }
 };
