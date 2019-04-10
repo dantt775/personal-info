@@ -17,6 +17,7 @@ export default class Footer extends Component {
 
 
 
+
                 <div className='icons-container'>
                     <a><img className='img-social' onClick={() => this.handleURL('https://github.com/dantt775')}
                         src={require('../../assets/images/git-hub.png')} />
