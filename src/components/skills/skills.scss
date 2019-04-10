@@ -1,0 +1,36 @@
+#container-skills{
+
+    .checked  {
+        color: orange;
+      }
+
+    .fa-star-half-o{
+        color: orange;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+
+    .skill-item{
+       
+        background: blanchedalmond;
+        padding: 5px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 250px;
+    }
+
+
+    .avatar{
+        height: 80%;
+    }
+
+
+
+
+}

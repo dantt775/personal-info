@@ -12,26 +12,27 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <section id='footer'>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
 
-                            <div className='icons-container'>    
-                                <a><img className='img-github' onClick={() => this.handleURL('https://github.com/dantt775')}
-                                    src={require('../../assets/images/git-hub.png')} />
-                                </a>
+            <div id='container-footer'>
 
-                                <a><img className='img-linkedin' onClick={() => this.handleURL('https://linkedin.com')}
-                                    src={require('../../assets/images/linkedin.png')} />
-                                </a>
-                            </div>
-                            <p> Daniel Marchi © 2018 </p>
-                            <p> daniel.marchi@outlook.com </p>
-                        </div>
-                    </div>                   
+
+
+                <div className='icons-container'>
+                    <a><img className='img-social' onClick={() => this.handleURL('https://github.com/dantt775')}
+                        src={require('../../assets/images/git-hub.png')} />
+                    </a>
+
+                    <a><img className='img-social' onClick={() => this.handleURL('https://linkedin.com')}
+                        src={require('../../assets/images/linkedin.png')} />
+                    </a>
                 </div>
-            </section>
+                <div className='info-footer'>
+                    <p> Daniel Marchi © 2018 </p>
+                    <p> daniel.marchi@outlook.com </p>
+                </div>
+            </div>
+
+
         )
     }
 }
