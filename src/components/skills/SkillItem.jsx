@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import './skills.scss'
 
 export default class SkillItem extends Component {
     constructor(props) {
@@ -9,27 +8,27 @@ export default class SkillItem extends Component {
 
 
     createRating() {
-        let i=0, jsx = [
+        let i = 0, jsx = [
             <span className="fa fa-star "></span>,
             <span className="fa fa-star "></span>,
             <span className="fa fa-star "></span>,
             <span className="fa fa-star "></span>,
             <span className="fa fa-star "></span>,
             //<span className="fa fa-star-half-o" aria-hidden="true"></span>,
-            
+
         ]
         for (i; i < this.props.level; i++) {
-          jsx[i] = <span className="fa fa-star checked"></span>;
+            jsx[i] = <span style={styles.checkedAndHalf} className="fa fa-star checked"></span>;
         }
-        if(!Number.isInteger(this.props.level)){
-            jsx[i-1]=<span className="fa fa-star-half-o" aria-hidden="true"></span>;
+        if (!Number.isInteger(this.props.level)) {
+            jsx[i - 1] = <span style={styles.checkedAndHalf} className="fa fa-star-half-o" aria-hidden="true"></span>;
         }
         return jsx;
     }
 
     render() {
         return (
-            <div className='skill-item'>
+            <div style={styles.skillItem}>
                 <p>{this.props.language}</p>
                 <p>{this.createRating()}</p>
 
@@ -38,4 +37,16 @@ export default class SkillItem extends Component {
         )
     }
 }
-
+const styles = {
+    skillItem: {
+        padding: 5,
+        marginTop: 10,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: 250,
+    },
+    checkedAndHalf: {
+        color: 'orange'
+    }
+}

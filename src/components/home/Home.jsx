@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Footer from '../footer/Footer.jsx';
+import Footer from '../Footer.jsx';
 import Carousel from '../carousel/Carousel.jsx';
 import Profile from '../profile/Profile.jsx';
 import Skills from '../skills/Skills.jsx';

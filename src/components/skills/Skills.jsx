@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 
 import SkillItem from './SkillItem.jsx'
-import './skills.scss'
 
 export default class Skills extends Component {
     render() {
         return (
-            <div id='container-skills'>
+            <div style={styles.skillContainer}>
                 <SkillItem
                     language={"Java"}
                     level={4.5}
@@ -45,5 +44,15 @@ export default class Skills extends Component {
 
             </div>
         )
+    }
+}
+
+const styles = {
+    skillContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'gray'
     }
 }
