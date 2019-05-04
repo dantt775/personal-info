@@ -6,24 +6,28 @@ export default class Skills extends Component {
     render() {
         return (
             <div style={styles.skillContainer}>
+
+            <h1 style={styles.competencias}>Competências</h1>
+
+
                 <SkillItem
                     language={"Java"}
-                    level={4.5}
+                    level={4}
                 />
 
                 <SkillItem
                     language={"SQL"}
-                    level={3.5}
+                    level={3}
                 />
 
                 <SkillItem
                     language={"HTML/CSS/Javascript"}
-                    level={3.5}
+                    level={3}
                 />
 
                 <SkillItem
                     language={"Reactjs"}
-                    level={3.5}
+                    level={3}
                 />
 
                 <SkillItem
@@ -53,6 +57,11 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color: 'gray'
+        color: 'gray',
+        height: 750,        
+        backgroundColor: 'white',
+    },
+    competencias: {
+        margin: 50,
     }
 }

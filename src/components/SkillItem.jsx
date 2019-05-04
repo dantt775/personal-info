@@ -9,11 +9,11 @@ export default class SkillItem extends Component {
 
     createRating() {
         let i = 0, jsx = [
-            <span className="fa fa-star "></span>,
-            <span className="fa fa-star "></span>,
-            <span className="fa fa-star "></span>,
-            <span className="fa fa-star "></span>,
-            <span className="fa fa-star "></span>,
+            <span style={styles.unchecked}></span>,
+            <span style={styles.unchecked} className="fa fa-star "></span>,
+            <span style={styles.unchecked} className="fa fa-star "></span>,
+            <span style={styles.unchecked}className="fa fa-star "></span>,
+            <span style={styles.unchecked} className="fa fa-star "></span>,
             //<span className="fa fa-star-half-o" aria-hidden="true"></span>,
 
         ]
@@ -29,7 +29,7 @@ export default class SkillItem extends Component {
     render() {
         return (
             <div style={styles.skillItem}>
-                <p>{this.props.language}</p>
+                <p style={styles.skillItem.p}>{this.props.language}</p>
                 <p>{this.createRating()}</p>
 
             </div>
@@ -45,8 +45,17 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: 250,
+        p:{
+            color: 'black',
+            fontSize: 14
+        }
+        
     },
     checkedAndHalf: {
-        color: 'orange'
+        color: 'orange',
+        backgroundColor: 'ping',
+    },
+    unchecked: {
+        color: 'gray'
     }
 }

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
-import './profile.scss'
 
 export default class Profile extends Component {
     render() {
         return (
-            <div id='container'>
+            <div style={styles.container}>
 
-                <div className='about-item'>
+                <div style={styles.aboutItem}>
                     <p >
                         <h2>Sobre mim</h2>
                         Lorem ipsum cubilia aliquet nostra dictum, vehicula egestas habitasse nisi curabitur tellus,
@@ -19,12 +18,12 @@ export default class Profile extends Component {
                 </div>
 
 
-                <div className='about-item'>
-                    <img className='avatar' src={require('../../assets/images/avatar.png')} />
+                <div style={styles.aboutItem}>
+                    <img style={styles.avatar} src={require('../assets/images/avatar.png')} />
                 </div>
-                
 
-                <div className='about-item'>
+
+                <div style={styles.aboutItem}>
                     <p >
                         <h2> Dados </h2>
                         Lorem ipsum cubilia aliquet nostra dictum, vehicula egestas habitasse nisi curabitur tellus,
@@ -41,5 +40,28 @@ export default class Profile extends Component {
 
             </div>
         )
+    }
+}
+
+
+const styles = {
+    aboutItem: {
+        background: 'tomato',
+        padding: '5',
+        width: 300,
+        height: 300,
+        marginTop: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        
+    },
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        height: 1100,
+        paddingTop: 350
+    },
+    avatar: {
+        height: '80%',
     }
 }

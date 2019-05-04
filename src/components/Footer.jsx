@@ -33,7 +33,8 @@ const styles = {
     containerFooter: {
         display: 'flex',
         flexDirection: 'column',
-        marginTop: 50,
+        height: 200,
+        
 
     },
     iconsContainer: {
@@ -41,16 +42,17 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: 50
     },
     imgSocial: {
-        margin: 10
+        marginLeft: 10,        
     },
     infoFooter: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 50,
+        
     }
 
 }
